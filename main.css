@@ -28,6 +28,27 @@ input {
   margin-top: 10px;
 }
 
+button {
+  background-color: #000000;
+  border: none;
+  color: white;
+  text-align:center;
+  display: inline-block;
+  font-size: 12px;
+  padding: 10px;
+  border-radius: 50%;
+}
+
 .addOption {
   margin-top: 10px;
+}
+
+.askOption {
+  border-radius: 50%;
+}
+
+
+img {
+  -webkit-filter: drop-shadow(5px 5px 5px #222 );
+  filter: drop-shadow(5px 5px 5px #222);
 }
