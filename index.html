@@ -4,6 +4,11 @@
     <meta charset="utf-8">
     <title>Help me choose</title>
     <link href="./main.css" rel="stylesheet" type="text/css">
+    <style>
+    .clicked {
+      background: yellow;
+      }
+    </style>
   </head>
  <body background="media/galax.jpg">
    <h1>Ask the magic eight ball</h1>
@@ -14,6 +19,27 @@
      </div>
      <button class="addOption">Add</button>
    </div>
+   <div class="resultSection"></div>
    <button class="askOption">Ask</button>
+
+   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+   <script>
+    $(function() {
+      $('.resultSection').hide()
+
+      var add_option = function() {
+        $('.inputs').append('<input></input>')
+      }
+
+      $('.addOption').click(add_option)
+
+      var add_color = function() {
+        $('body').toggleClass('clicked')
+      }
+
+      $('h1').click(add_color)
+
+    })
+   </script>
   </body>
 </html>
