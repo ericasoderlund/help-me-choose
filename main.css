@@ -39,16 +39,27 @@ button {
   border-radius: 50%;
 }
 
+button:hover {
+  background-color: #276b49;
+}
+
 .addOption {
   margin-top: 10px;
 }
 
-.askOption {
-  border-radius: 50%;
-}
-
-
 img {
   -webkit-filter: drop-shadow(5px 5px 5px #222 );
   filter: drop-shadow(5px 5px 5px #222);
+}
+
+.resultSection {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+  color: #ffffff;
+  position: absolute;
+  top: 230px;
+  margin-left: -5px;
 }

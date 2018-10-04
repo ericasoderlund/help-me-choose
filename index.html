@@ -11,16 +11,17 @@
     </style>
   </head>
  <body background="media/galax.jpg">
-   <h1>Ask the magic eight ball</h1>
-   <img src="media/attan.png" width="300px">
+   <h1 ID=rubrikEtt>Ask the magic eight ball</h1>
+   <img id="8" src="media/attan.png" width="300px">
    <div class="inputSection">
      <div class="inputs">
        <input placeholder="Decision">
      </div>
      <button class="addOption">Add</button>
    </div>
-   <div class="resultSection"></div>
-   <button class="askOption">Ask</button>
+   <div class="resultSection">
+   </div>
+   <button class="submit">Ask</button>
 
    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
    <script>
@@ -39,6 +40,21 @@
 
       $('h1').click(add_color)
 
+      var options = []
+      var submit = function() {
+        $('.inputSection').hide()
+        $('#8').replaceWith('<img src="media/tomboll.png" width="300px">')
+        $('#tom').show()
+        $('#rubrikEtt').replaceWith('<h1>The magic eight ball says:</h1>')
+        $('.resultSection').css('display', 'flex')
+        $('input').each(function() {
+          options.push($(this).val())
+        })
+        var winner = options[Math.floor(Math.random() * options.length)]
+        console.log(winner)
+        $('.resultSection').text(winner)
+      }
+        $('.submit').click(submit)
     })
    </script>
   </body>
