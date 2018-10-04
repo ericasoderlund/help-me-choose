@@ -11,11 +11,11 @@
     </style>
   </head>
  <body background="media/galax.jpg">
-   <h1 ID=rubrikEtt>Ask the magic eight ball</h1>
+   <h1 ID=rubrikEtt>Let the magic eight ball decide</h1>
    <img id="8" src="media/attan.png" width="300px">
    <div class="inputSection">
      <div class="inputs">
-       <input placeholder="Decision">
+       <input placeholder="This...">
      </div>
      <button class="addOption">Add</button>
    </div>
@@ -29,7 +29,7 @@
       $('.resultSection').hide()
 
       var add_option = function() {
-        $('.inputs').append('<input></input>')
+        $('.inputs').append('<input placeholder="or this..."></input>')
       }
 
       $('.addOption').click(add_option)
