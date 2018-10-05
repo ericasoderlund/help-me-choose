@@ -54,6 +54,7 @@ img {
 
 .resultSection {
   height: 300px;
+  width: 130px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,4 +63,5 @@ img {
   position: absolute;
   top: 230px;
   margin-left: -5px;
+  text-align: center;
 }

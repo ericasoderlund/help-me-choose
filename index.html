@@ -46,6 +46,7 @@
         $('#8').replaceWith('<img src="media/tomboll.png" width="300px">')
         $('#tom').show()
         $('#rubrikEtt').replaceWith('<h1>The magic eight ball says:</h1>')
+        $('.submit').replaceWith('<button id="reload">Ask again</button>')
         $('.resultSection').css('display', 'flex')
         $('input').each(function() {
           options.push($(this).val())
@@ -53,8 +54,14 @@
         var winner = options[Math.floor(Math.random() * options.length)]
         console.log(winner)
         $('.resultSection').text(winner)
+        $('#reload').click(function () {
+            location.reload();
+        });
+
       }
         $('.submit').click(submit)
+
+
     })
    </script>
   </body>
